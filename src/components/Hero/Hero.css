@@ -1,0 +1,114 @@
+.hero {
+    background: linear-gradient(
+        100deg,
+        rgb(28, 232, 232),
+        aqua,
+        lightgreen
+    );
+
+    text-align: center;
+    padding: 100px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 50px;
+    animation: fadeinup 1s ease 0.2s both;
+}
+
+.hero p {
+    animation: fadeinup 1s ease 0.4s both;
+}
+
+.hero a {
+    animation: fadeinup 1s ease 0.6s both;
+}
+
+.hero-button {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
+    font-size: 20px;
+    margin: 10px;
+}
+
+.btn-primary:hover {
+    background: transparent;
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.btn-secondary {
+    background-color: white;
+    color: var(--primary);
+    font-size: 20px;
+}
+
+.btn-secondary:hover {
+    background-color: transparent;
+    border-color: white;
+    color: white;
+    font-weight: bolder;
+}
+
+@keyframes fadeinup {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body[data-theme="dark"] .hero {
+    background: linear-gradient(
+        100deg,
+        rgb(0, 255, 72),
+        aqua,
+        rgb(0, 26, 255)
+    );
+
+    color: black;
+}
+
+body[data-theme="dark"] .btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+body[data-theme="dark"] .btn-primary:hover {
+    background-color: transparent;
+    color: var(--primary);
+}
+
+body[data-theme="dark"] .btn-secondary {
+    border-color: white;
+    color: var(--primary);
+}
+
+body[data-theme="dark"] .btn-secondary:hover {
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
