@@ -29,7 +29,7 @@ function Navbar() {
     return (
         <header className="site-header">
             <nav className="navbar">
-                <div className="logo">GG</div>
+                <div className="logo">NK</div>
 
                 <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
                     <li>
